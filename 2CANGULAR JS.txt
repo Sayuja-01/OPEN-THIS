@@ -1,0 +1,129 @@
+create a angular application
+1) Install Node js
+
+
+Microsoft Windows [Version 10.0.22000.1936]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Dell>cd  C:\Users\Dell\OneDrive\Documents\WAD\ass 2c
+
+C:\Users\Dell\OneDrive\Documents\WAD\ass 2c>npm install -g @angular/cli@latest
+npm WARN deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+
+changed 256 packages in 13s
+
+37 packages are looking for funding
+  run `npm fund` for details
+
+
+
+C:\Users\Dell\OneDrive\Documents\WAD\ass 2c>ng new part_c
+? Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.io/analytics. Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable --global
+
+Global setting: enabled
+Local setting: No local workspace configuration file.
+Effective status: enabled
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE part_c/angular.json (2700 bytes)
+CREATE part_c/package.json (1037 bytes)
+CREATE part_c/README.md (1059 bytes)
+CREATE part_c/tsconfig.json (901 bytes)
+CREATE part_c/.editorconfig (274 bytes)
+CREATE part_c/.gitignore (548 bytes)
+CREATE part_c/tsconfig.app.json (263 bytes)
+CREATE part_c/tsconfig.spec.json (273 bytes)
+CREATE part_c/.vscode/extensions.json (130 bytes)
+CREATE part_c/.vscode/launch.json (470 bytes)
+CREATE part_c/.vscode/tasks.json (938 bytes)
+CREATE part_c/src/main.ts (214 bytes)
+CREATE part_c/src/favicon.ico (948 bytes)
+CREATE part_c/src/index.html (291 bytes)
+CREATE part_c/src/styles.css (80 bytes)
+CREATE part_c/src/app/app-routing.module.ts (245 bytes)
+CREATE part_c/src/app/app.module.ts (393 bytes)
+CREATE part_c/src/app/app.component.html (23115 bytes)
+CREATE part_c/src/app/app.component.spec.ts (991 bytes)
+CREATE part_c/src/app/app.component.ts (210 bytes)
+CREATE part_c/src/app/app.component.css (0 bytes)
+CREATE part_c/src/assets/.gitkeep (0 bytes)
+√ Packages installed successfully.
+    Directory is already under version control. Skipping initialization of git.
+
+*******************************************************************************************************************************************************
+
+C:\Users\Dell\OneDrive\Documents\WAD\ass 2c>cd part_c
+
+*********************************************************************************************************************************************************
+*******app.component.ts*********
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Registration Form';
+  displayname='';
+  displayLname='';
+  displayaddr='';
+  getvalue(name:string, Lname:string, addr:string){
+  this.displayname=name;
+  this.displayLname=Lname;
+  this.displayaddr=addr;
+  }
+}
+
+
+
+**********app.component.html**************
+
+<h1>{{title}}</h1>
+<input type="text" #name placeholder="Enter Your NAme" name="name">
+<br>
+<input type="lname" #Lname placeholder="Enter Your lname" name="Lname">
+<br>
+<input type="text" #addr placeholder="Enter addr " name="addr">
+
+<br>
+<button (click)="getvalue(name.value, Lname.value, addr.value)">Resister</button>
+<h1>Your Resister Data</h1><br>
+<p>name:{{displayname}}</p>
+<p>name:{{displayLname}}</p>
+<p>name:{{displayaddr}}</p>
+
+
+
+
+
+
+*********************************************************************************************************************************************************
+
+C:\Users\Dell\OneDrive\Documents\WAD\ass 2c\part_c>ng serve
+√ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   2.26 MB |
+polyfills.js          | polyfills     | 328.93 kB |
+styles.css, styles.js | styles        | 226.36 kB |
+main.js               | main          |   8.94 kB |
+runtime.js            | runtime       |   6.51 kB |
+
+                      | Initial Total |   2.82 MB
+
+Build at: 2023-05-28T09:24:30.685Z - Hash: 27ee019ae830c5bc - Time: 4487ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+√ Compiled successfully.

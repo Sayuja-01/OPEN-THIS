@@ -1,0 +1,52 @@
+TYPES OF CSS ARE
+INLINE, EXTERNAL, INTERNAL
+
+TERMINAL STEPS
+1) Install Node js
+2)npm install -g @angular/cli@latest
+3)ng analytics disable --global
+4) Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+5)C:\Users\Dell\OneDrive\Documents\WAD\ass 2c>cd part_c
+6)*******app.component.ts*********
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'Registration Form';
+  displayname='';
+  displayLname='';
+  displayaddr='';
+  getvalue(name:string, Lname:string, addr:string){
+  this.displayname=name;
+  this.displayLname=Lname;
+  this.displayaddr=addr;
+  }
+}
+
+
+
+**********app.component.html**************
+
+<h1>{{title}}</h1>
+<input type="text" #name placeholder="Enter Your NAme" name="name">
+<br>
+<input type="lname" #Lname placeholder="Enter Your lname" name="Lname">
+<br>
+<input type="text" #addr placeholder="Enter addr " name="addr">
+
+<br>
+<button (click)="getvalue(name.value, Lname.value, addr.value)">Resister</button>
+<h1>Your Resister Data</h1><br>
+<p>name:{{displayname}}</p>
+<p>name:{{displayLname}}</p>
+<p>name:{{displayaddr}}</p>
+
+7)
+
